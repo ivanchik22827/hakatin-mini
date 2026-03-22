@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cin28pnrbnpih"]
+
+[ext_resource type="PackedScene" uid="uid://bkux1lqdwrrs3" path="res://scenes/Small scenes/BlankPath.tscn" id="1_76tow"]
+[ext_resource type="PackedScene" uid="uid://b2mgcdwlceh5i" path="res://scenes/Small scenes/50Trees.tscn" id="2_f8oor"]
+[ext_resource type="PackedScene" uid="uid://d3g5acjch64di" path="res://scenes/Small scenes/CornerTrees.tscn" id="3_ykton"]
+[ext_resource type="PackedScene" uid="uid://b8mj7usnh0c4b" path="res://scenes/Small scenes/EnterTrees.tscn" id="4_yj0s0"]
+[ext_resource type="PackedScene" uid="uid://01d2yvedff53" path="res://scenes/Small scenes/SmallTrees1.tscn" id="5_f5ox0"]
+
+[node name="PathWay3" type="Node3D"]
+
+[node name="SmallTress2" parent="." instance=ExtResource("5_f5ox0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
+
+[node name="BlankPath" parent="." instance=ExtResource("1_76tow")]
+
+[node name="50Trees" parent="." instance=ExtResource("2_f8oor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="CornerTrees" parent="." instance=ExtResource("3_ykton")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -10)
+
+[node name="EnterTrees" parent="." instance=ExtResource("4_yj0s0")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8.742278e-07, 0, -10)
+
+[node name="CornerTrees2" parent="." instance=ExtResource("3_ykton")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 0, 10)
+
+[node name="EnterTrees2" parent="." instance=ExtResource("4_yj0s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="SmallTress1" parent="." instance=ExtResource("5_f5ox0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="SmallTress3" parent="." instance=ExtResource("5_f5ox0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10, 0, -10)

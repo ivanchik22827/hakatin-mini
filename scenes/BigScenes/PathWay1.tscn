@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://4esho1i62id8"]
+
+[ext_resource type="PackedScene" uid="uid://01d2yvedff53" path="res://scenes/Small scenes/SmallTrees1.tscn" id="1_ffnnq"]
+[ext_resource type="PackedScene" uid="uid://u0l704q0o3pe" path="res://scenes/Small scenes/Path1.tscn" id="2_gqxb6"]
+
+[node name="Pathway1" type="Node3D"]
+
+[node name="SmallTress1" parent="." instance=ExtResource("1_ffnnq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, 10)
+
+[node name="SmallTress2" parent="." instance=ExtResource("1_ffnnq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 0, 10)
+
+[node name="Path1" parent="." instance=ExtResource("2_gqxb6")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Path2" parent="." instance=ExtResource("2_gqxb6")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 10)
+
+[node name="SmallTress3" parent="." instance=ExtResource("1_ffnnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="SmallTress4" parent="." instance=ExtResource("1_ffnnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="Path3" parent="." instance=ExtResource("2_gqxb6")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.371139e-07, 0, -10)
+
+[node name="SmallTress5" parent="." instance=ExtResource("1_ffnnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -10)
+
+[node name="SmallTress6" parent="." instance=ExtResource("1_ffnnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -10)
