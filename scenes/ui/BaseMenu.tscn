@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://fln4tg0fnbiy"]
+
+[ext_resource type="FontFile" uid="uid://dqnwu44pxp1g6" path="res://Fonts/Almendra-Regular.ttf" id="1_kt28l"]
+[ext_resource type="Texture2D" uid="uid://cqyxsjdfn18s" path="res://images/Textures/ramkiMenu.png" id="2_8naei"]
+[ext_resource type="Texture2D" uid="uid://uj4o871fhvlo" path="res://images/Textures/Gemini_Generated_Image_cpskolcpskolcpsk.png" id="3_8naei"]
+[ext_resource type="Script" uid="uid://kl7ciuv3i35s" path="res://Scripts/main_menu.gd" id="3_xx0lj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gy6ah"]
+texture = ExtResource("2_8naei")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(0, 500, 1408, 250)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ntvy3"]
+texture = ExtResource("2_8naei")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 32.0
+region_rect = Rect2(0, 20, 1408, 250)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sne5i"]
+texture = ExtResource("2_8naei")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(0, 270, 1408, 250)
+
+[sub_resource type="Theme" id="Theme_xx0lj"]
+Button/fonts/font = ExtResource("1_kt28l")
+Button/styles/hover = SubResource("StyleBoxTexture_gy6ah")
+Button/styles/normal = SubResource("StyleBoxTexture_ntvy3")
+Button/styles/pressed = SubResource("StyleBoxTexture_sne5i")
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=106729259]
+
+[node name="MainMenu" type="Control" parent="." unique_id=929938365]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_xx0lj")
+script = ExtResource("3_xx0lj")
+
+[node name="Background" type="TextureRect" parent="MainMenu" unique_id=1336657901]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8naei")
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="MainMenu" unique_id=294336541]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMenu" unique_id=1298712643]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="MainLayout" type="VBoxContainer" parent="MainMenu/MarginContainer" unique_id=1857160560]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MainMenu/MarginContainer/MainLayout" unique_id=1699486335]
+layout_mode = 2
+texture = ExtResource("3_8naei")
+expand_mode = 1
+
+[node name="Spacer" type="Control" parent="MainMenu/MarginContainer/MainLayout" unique_id=676452665]
+layout_mode = 2
+
+[node name="ButtonsStack" type="VBoxContainer" parent="MainMenu/MarginContainer/MainLayout" unique_id=1797766438]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="New game" type="Button" parent="MainMenu/MarginContainer/MainLayout/ButtonsStack" unique_id=1509553359]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "New game"
+
+[node name="Load game" type="Button" parent="MainMenu/MarginContainer/MainLayout/ButtonsStack" unique_id=1585466972]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Load game"
+
+[node name="Settings" type="Button" parent="MainMenu/MarginContainer/MainLayout/ButtonsStack" unique_id=1968244159]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+
+[node name="Quit" type="Button" parent="MainMenu/MarginContainer/MainLayout/ButtonsStack" unique_id=1191703233]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Quit
+"
+
+[connection signal="pressed" from="MainMenu/MarginContainer/MainLayout/ButtonsStack/New game" to="MainMenu" method="_on_new_game_pressed"]
+[connection signal="pressed" from="MainMenu/MarginContainer/MainLayout/ButtonsStack/Load game" to="MainMenu" method="_on_load_game_pressed"]
+[connection signal="pressed" from="MainMenu/MarginContainer/MainLayout/ButtonsStack/Settings" to="MainMenu" method="_on_settings_pressed"]
+[connection signal="pressed" from="MainMenu/MarginContainer/MainLayout/ButtonsStack/Quit" to="MainMenu" method="_on_quit_pressed"]
