@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://drekp7s651haa"
-path="res://.godot/imported/onus.fbx-52a60743a835648d54645f36268131ee.scn"
+uid="uid://bhcot3r41740o"
+path="res://.godot/imported/onus (2).fbx-73d15129d987e2b958330decc3145e99.scn"
 
 [deps]
 
-source_file="res://resourses/onus.fbx"
-dest_files=["res://.godot/imported/onus.fbx-52a60743a835648d54645f36268131ee.scn"]
+source_file="res://resourses/onus (2).fbx"
+dest_files=["res://.godot/imported/onus (2).fbx-73d15129d987e2b958330decc3145e99.scn"]
 
 [params]
 

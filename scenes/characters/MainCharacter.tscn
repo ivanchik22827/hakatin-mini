@@ -806,7 +806,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_back",
-"speed": 16.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -835,7 +835,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_front",
-"speed": 16.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -864,7 +864,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_left",
-"speed": 16.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -893,7 +893,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_right",
-"speed": 16.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1476,6 +1476,13 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_72ptp"]
+height = 0.8267822
+radius = 0.36621094
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mvbkk"]
+size = Vector3(1, 0.115, 1)
+
 [node name="MainCharacter" type="CharacterBody3D" unique_id=895241956 groups=["Player"]]
 script = ExtResource("7_72ptp")
 
@@ -1488,11 +1495,14 @@ sprite_frames = SubResource("SpriteFrames_pnwlc")
 animation = &"attack_right"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=724404048]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38150024, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33847046, 0)
+shape = SubResource("CylinderShape3D_72ptp")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=437315717]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 2, 3)
 current = true
 script = ExtResource("7_45vv0")
 
-[node name="ShapeCast3D" type="ShapeCast3D" parent="." unique_id=1424290673]
+[node name="AttackShape" type="ShapeCast3D" parent="." unique_id=1424290673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31211638, 0)
+shape = SubResource("BoxShape3D_mvbkk")

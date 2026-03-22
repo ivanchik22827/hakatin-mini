@@ -3,7 +3,7 @@ extends CharacterBody3D
 class_name Player
 
 @onready var sprite = $Sprite3D
-@onready var attack_ray = $AttackRay # <--- Ссылка на наш узел луча
+@onready var attack_shape = $AttackShape # <--- Ссылка на наш узел луча
 
 const SPEED = 5.0
 var health = 10
@@ -11,7 +11,7 @@ var current_dir = "front"
 var is_locked = false 
 var is_invulnerable = false # Временная бессмертность
 var face_direction = Vector3(0, 0, 1) # Куда мы сейчас смотрим
-const ATTACK_RANGE = 2.0 # Дальность удара
+const ATTACK_RANGE = 1.0 # Дальность удара
 
 # ==========================================
 const TIME_ATTACK = 0.5       # Время атаки
@@ -40,7 +40,7 @@ func _physics_process(_delta):
 		
 		# Поворачиваем луч атаки в ту сторону, куда идем
 		face_direction = direction
-		attack_ray.target_position = face_direction * ATTACK_RANGE
+		attack_shape.target_position = face_direction * ATTACK_RANGE
 		
 		update_direction_string(direction)
 		sprite.play("run_" + current_dir)
@@ -62,27 +62,28 @@ func update_direction_string(dir: Vector3):
 # ВОТ ТА САМАЯ ФУНКЦИЯ АТАКИ
 # ==========================================
 func perform_attack():
-	is_locked = true
 	sprite.play("attack_" + current_dir)
+	is_locked = true
 	
-	attack_ray.force_raycast_update()
+	# Небольшая задержка перед уроном (чтобы меч успел опуститься)
+	await get_tree().create_timer(0.3).timeout 
 	
-	if attack_ray.is_colliding(): 
-		var target = attack_ray.get_collider()
-		print("ЛУЧ ВРЕЗАЛСЯ В: ", target.name) # Смотрим, куда попали
-		
-		if target.has_method("take_damage"):
-			target.take_damage()
-			print("И УДАРИЛ ВРАГА!") 
-		else:
-			print("Но у этого объекта нет функции take_damage (это стена/пол?)")
-	else:
-		print("Луч рассек пустоту (ни в кого не попал)...")
+	# Заставляем коробку обновиться прямо сейчас
+	attack_shape.force_shapecast_update()
+	
+	if attack_shape.is_colliding(): 
+		# Перебираем ВСЕХ, кто попал в нашу коробку (можно ударить толпу!)
+		for i in attack_shape.get_collision_count():
+			var target = attack_shape.get_collider(i)
 			
-	await get_tree().create_timer(TIME_ATTACK).timeout 
+			if target.has_method("take_damage"):
+				target.take_damage()
+				print("Размашистый удар по: ", target.name)
+				
+	await get_tree().create_timer(0.4).timeout 
 	if health > 0:
 		is_locked = false
-
+		
 # Получение урона игроком
 func take_damage():
 	# Если мы мертвы ИЛИ у нас активна неуязвимость - игнорируем удар
