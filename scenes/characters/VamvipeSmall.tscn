@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b2l2rnlmwf3qj"]
+[gd_scene load_steps=0 format=3 uid="uid://b2l2rnlmwf3qj"]
 
 [ext_resource type="Texture2D" uid="uid://dsli0itlsuycs" path="res://sprites/Vampires1/Vampires1_Attack_with_shadow.png" id="1_ol1l7"]
 [ext_resource type="Texture2D" uid="uid://ckpg1v3g52jw1" path="res://sprites/Vampires1/Vampires1_Death_with_shadow.png" id="2_bos1m"]
