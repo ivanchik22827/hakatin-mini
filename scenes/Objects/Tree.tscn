@@ -1,10 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://bdhrh3gi8wrcq"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_o7fh4"]
-size = Vector3(1, 3, 1)
+[ext_resource type="PackedScene" uid="uid://cvpuyws7m13gr" path="res://Models/TREE (2).fbx" id="1_yba1w"]
 
 [node name="Tree" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-mesh = SubResource("BoxMesh_o7fh4")
+[node name="TREE (2)" parent="." instance=ExtResource("1_yba1w")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.21696222, 0.12478006, 0)

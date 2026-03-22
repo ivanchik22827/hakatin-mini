@@ -11,16 +11,16 @@ size = Vector2(10, 10)
 mesh = SubResource("PlaneMesh_nnpfv")
 
 [node name="Tree" parent="." instance=ExtResource("1_d2fod")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2337384, 0, 4.37479)
+transform = Transform3D(0.84979147, 0, -0.527119, 0, 1, 0, 0.527119, 0, 0.84979147, 3.2337384, -0.075042486, 4.37479)
 
 [node name="Tree2" parent="." instance=ExtResource("1_d2fod")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.63156223, 0, 4.3221035)
+transform = Transform3D(-0.5344408, 0, 0.84520584, 0, 0.9, 0, -0.84520584, 0, -0.5344408, -0.63156223, -0.096119635, 4.3221035)
 
 [node name="Tree3" parent="." instance=ExtResource("1_d2fod")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5456262, 0, 4.3928957)
+transform = Transform3D(0.76357067, 0, 0.64572424, 0, 1.1, 0, -0.64572424, 0, 0.76357067, -3.5456262, -0.20632578, 4.3928957)
 
 [node name="Tree4" parent="." instance=ExtResource("1_d2fod")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4567304, 0, -4.323591)
+transform = Transform3D(-0.6298086, 0, 0.7767504, 0, 1.1, 0, -0.7767504, 0, -0.6298086, 2.4567304, -0.22020505, -4.323591)
 
 [node name="Tree5" parent="." instance=ExtResource("1_d2fod")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2697062, 0, -4.372365)
+transform = Transform3D(-0.68421626, 0, -0.72927916, 0, 1, 0, 0.72927916, 0, -0.68421626, -2.2697062, -0.118863106, -4.372365)
