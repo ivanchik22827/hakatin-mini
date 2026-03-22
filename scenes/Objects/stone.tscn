@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b76yv50h3hm1e"]
+
+[ext_resource type="PackedScene" uid="uid://dhm05okk7aw3x" path="res://Models/stone (2).fbx" id="1_qp5er"]
+[ext_resource type="Material" uid="uid://dpto4di8gce4u" path="res://materials/stone.tres" id="2_u0oxa"]
+
+[node name="Stone" type="Node3D" unique_id=1085935728]
+
+[node name="stone (2)" parent="." unique_id=156088700 instance=ExtResource("1_qp5er")]
+
+[node name="Cylinder001" parent="stone (2)" index="0" unique_id=269887762]
+surface_material_override/0 = ExtResource("2_u0oxa")
+
+[editable path="stone (2)"]

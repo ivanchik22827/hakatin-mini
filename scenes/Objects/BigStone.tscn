@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://chmu5njdaihwm"]
+
+[ext_resource type="PackedScene" uid="uid://bmm3jf5rsktt2" path="res://Models/big_stone.fbx" id="1_bpxnx"]
+[ext_resource type="Material" uid="uid://de0dmxwxlx0pc" path="res://materials/BigStone_mat.tres" id="2_rbmap"]
+
+[node name="BigStone" type="Node3D" unique_id=68190581]
+
+[node name="big_stone" parent="." unique_id=402837215 instance=ExtResource("1_bpxnx")]
+
+[node name="Cylinder007" parent="big_stone" index="0" unique_id=310597]
+surface_material_override/0 = ExtResource("2_rbmap")
+
+[editable path="big_stone"]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dk571mu5qwt0g"]
+
+[ext_resource type="PackedScene" uid="uid://cs1fcvd6mx0i3" path="res://Models/bush.fbx" id="1_8hrn6"]
+[ext_resource type="Material" uid="uid://dxfja6ks74ok7" path="res://materials/bush_mat.tres" id="2_vp2ie"]
+
+[node name="Bush" type="Node3D" unique_id=2123050176]
+
+[node name="bush" parent="." unique_id=1421284082 instance=ExtResource("1_8hrn6")]
+
+[node name="leaves" parent="bush" index="0" unique_id=1946090065]
+surface_material_override/0 = ExtResource("2_vp2ie")
+
+[node name="trunk" parent="bush" index="1" unique_id=1770247604]
+surface_material_override/0 = ExtResource("2_vp2ie")
+
+[editable path="bush"]

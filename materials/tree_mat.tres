@@ -1,0 +1,11 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://b23tof27qm1j7"]
+
+[ext_resource type="Texture2D" uid="uid://b1o3gdj8nf0jn" path="res://textures/tree/base color.png" id="1_yfd0x"]
+[ext_resource type="Texture2D" uid="uid://cofwjecg5j7lr" path="res://textures/tree/ORM.png" id="2_u17x1"]
+
+[resource]
+albedo_texture = ExtResource("1_yfd0x")
+orm_texture = ExtResource("2_u17x1")
+distance_fade_mode = 2
+distance_fade_min_distance = 2.0
+distance_fade_max_distance = 3.0

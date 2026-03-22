@@ -12,6 +12,7 @@ var is_locked = false
 var is_invulnerable = false # Временная бессмертность
 var face_direction = Vector3(0, 0, 1) # Куда мы сейчас смотрим
 const ATTACK_RANGE = 1.0 # Дальность удара
+var gravity:float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 # ==========================================
 const TIME_ATTACK = 0.5       # Время атаки
@@ -20,6 +21,9 @@ const TIME_DEATH = 1.0        # Время смерти
 # ==========================================
 
 func _physics_process(_delta):
+	if not is_on_floor():
+		velocity.y -= gravity * _delta
+	
 	if is_locked:
 		velocity = Vector3.ZERO
 		move_and_slide()

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="HakatinMini"
-run/main_scene="uid://7uyh4e0kw817"
+run/main_scene="uid://co7qfej3l1ddf"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

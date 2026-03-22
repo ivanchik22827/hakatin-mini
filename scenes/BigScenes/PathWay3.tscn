@@ -1,112 +1,212 @@
-[gd_scene load_steps=13 format=3 uid="uid://cin28pnrbnpih"]
+[gd_scene format=3 uid="uid://cin28pnrbnpih"]
 
 [ext_resource type="PackedScene" uid="uid://bkux1lqdwrrs3" path="res://scenes/Small scenes/BlankPath.tscn" id="1_76tow"]
 [ext_resource type="PackedScene" uid="uid://b2mgcdwlceh5i" path="res://scenes/Small scenes/50Trees.tscn" id="2_f8oor"]
 [ext_resource type="PackedScene" uid="uid://d3g5acjch64di" path="res://scenes/Small scenes/CornerTrees.tscn" id="3_ykton"]
 [ext_resource type="PackedScene" uid="uid://b8mj7usnh0c4b" path="res://scenes/Small scenes/EnterTrees.tscn" id="4_yj0s0"]
 [ext_resource type="PackedScene" uid="uid://01d2yvedff53" path="res://scenes/Small scenes/SmallTrees1.tscn" id="5_f5ox0"]
+[ext_resource type="Material" uid="uid://cfjfxuayrugp6" path="res://materials/House_mat.tres" id="6_1qrvq"]
 [ext_resource type="PackedScene" uid="uid://0qgbwosgkdxr" path="res://Models/house.fbx" id="6_7riow"]
 [ext_resource type="PackedScene" uid="uid://unrikbcsd8e0" path="res://Models/fence.fbx" id="7_f4abh"]
-[ext_resource type="PackedScene" uid="uid://cs1fcvd6mx0i3" path="res://Models/bush.fbx" id="8_uam4l"]
+[ext_resource type="Material" uid="uid://f54rti7xjh5k" path="res://materials/fence_mat.tres" id="9_j28u1"]
 [ext_resource type="PackedScene" uid="uid://bdhrh3gi8wrcq" path="res://scenes/Objects/Tree.tscn" id="9_ubpmf"]
 [ext_resource type="PackedScene" uid="uid://cdr5bv6e4m1k3" path="res://Models/colodec.fbx" id="10_1qrvq"]
+[ext_resource type="PackedScene" uid="uid://dk571mu5qwt0g" path="res://scenes/Objects/Bush.tscn" id="10_ax156"]
 [ext_resource type="PackedScene" uid="uid://f5wbt1ogudio" path="res://Models/woods.fbx" id="11_miyuv"]
-[ext_resource type="PackedScene" uid="uid://b2hwfu1dqqe8b" path="res://Models/bush2.fbx" id="12_ubpmf"]
+[ext_resource type="Material" uid="uid://dy2hbc7l0io11" path="res://materials/colodec_mat.tres" id="13_kayaq"]
+[ext_resource type="Material" uid="uid://bb5hlqi4vgdn7" path="res://materials/woods_mat.tres" id="15_ax156"]
 
-[node name="PathWay3" type="Node3D"]
+[node name="PathWay3" type="Node3D" unique_id=625265418]
 
-[node name="BlankPath" parent="." instance=ExtResource("1_76tow")]
+[node name="BlankPath" parent="." unique_id=571192643 instance=ExtResource("1_76tow")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.536743e-07)
 
-[node name="50Trees" parent="." instance=ExtResource("2_f8oor")]
+[node name="50Trees" parent="." unique_id=110509712 instance=ExtResource("2_f8oor")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
 
-[node name="CornerTrees" parent="." instance=ExtResource("3_ykton")]
+[node name="CornerTrees" parent="." unique_id=789376669 instance=ExtResource("3_ykton")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -10)
 
-[node name="EnterTrees" parent="." instance=ExtResource("4_yj0s0")]
+[node name="EnterTrees" parent="." unique_id=506750971 instance=ExtResource("4_yj0s0")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8.742278e-07, 0, -10)
 
-[node name="CornerTrees2" parent="." instance=ExtResource("3_ykton")]
+[node name="CornerTrees2" parent="." unique_id=640191411 instance=ExtResource("3_ykton")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 0, 10)
 
-[node name="EnterTrees2" parent="." instance=ExtResource("4_yj0s0")]
+[node name="EnterTrees2" parent="." unique_id=237760128 instance=ExtResource("4_yj0s0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
 
-[node name="house" parent="." instance=ExtResource("6_7riow")]
+[node name="house" parent="." unique_id=1329903721 instance=ExtResource("6_7riow")]
 transform = Transform3D(0.9994042, 0, -0.03451574, 0, 1, 0, 0.03451574, 0, 0.9994042, -7.50159, 0, -4.8474035)
 
-[node name="SmallTress1" parent="." instance=ExtResource("5_f5ox0")]
+[node name="axe" parent="house" index="0" unique_id=923268975]
+surface_material_override/0 = ExtResource("6_1qrvq")
+
+[node name="barrels" parent="house" index="1" unique_id=1296789751]
+surface_material_override/0 = ExtResource("6_1qrvq")
+
+[node name="door" parent="house" index="2" unique_id=1880641730]
+surface_material_override/0 = ExtResource("6_1qrvq")
+
+[node name="log" parent="house" index="3" unique_id=1770926941]
+surface_material_override/0 = ExtResource("6_1qrvq")
+
+[node name="logs" parent="house" index="4" unique_id=1940945297]
+surface_material_override/0 = ExtResource("6_1qrvq")
+
+[node name="main" parent="house" index="5" unique_id=963763224]
+surface_material_override/0 = ExtResource("6_1qrvq")
+
+[node name="pipe" parent="house" index="6" unique_id=56034929]
+surface_material_override/0 = ExtResource("6_1qrvq")
+
+[node name="roof" parent="house" index="7" unique_id=281346945]
+surface_material_override/0 = ExtResource("6_1qrvq")
+
+[node name="stairs" parent="house" index="8" unique_id=1951371367]
+surface_material_override/0 = ExtResource("6_1qrvq")
+
+[node name="windows" parent="house" index="9" unique_id=521009640]
+surface_material_override/0 = ExtResource("6_1qrvq")
+
+[node name="SmallTress1" parent="." unique_id=1861044359 instance=ExtResource("5_f5ox0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 
-[node name="SmallTress2" parent="." instance=ExtResource("5_f5ox0")]
+[node name="SmallTress2" parent="." unique_id=1651292402 instance=ExtResource("5_f5ox0")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, 10)
 
-[node name="SmallTress3" parent="." instance=ExtResource("5_f5ox0")]
+[node name="SmallTress3" parent="." unique_id=1084492729 instance=ExtResource("5_f5ox0")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10, 0, -10)
 
-[node name="fence" parent="." instance=ExtResource("7_f4abh")]
+[node name="fence" parent="." unique_id=1528987752 instance=ExtResource("7_f4abh")]
 transform = Transform3D(-0.26458004, 0, 0.9643637, 0, 1, 0, -0.9643637, 0, -0.26458004, -7.8366804, 4.7683716e-07, 8.936427)
 
-[node name="fence2" parent="." instance=ExtResource("7_f4abh")]
+[node name="fence" parent="fence" index="0" unique_id=1115451419]
+surface_material_override/0 = ExtResource("9_j28u1")
+
+[node name="fence2" parent="." unique_id=622481506 instance=ExtResource("7_f4abh")]
 transform = Transform3D(-0.51213276, 0, 0.8589062, 0, 1, 0, -0.8589062, 0, -0.51213276, -6.0156894, 4.7683716e-07, 8.149375)
 
-[node name="fence3" parent="." instance=ExtResource("7_f4abh")]
+[node name="fence" parent="fence2" index="0" unique_id=1115451419]
+surface_material_override/0 = ExtResource("9_j28u1")
+
+[node name="fence3" parent="." unique_id=1614313381 instance=ExtResource("7_f4abh")]
 transform = Transform3D(-0.7664593, 0, 0.64229274, 0, 1, 0, -0.64229274, 0, -0.7664593, -4.4781213, 4.7683716e-07, 6.8948407)
 
-[node name="fence4" parent="." instance=ExtResource("7_f4abh")]
+[node name="fence" parent="fence3" index="0" unique_id=1115451419]
+surface_material_override/0 = ExtResource("9_j28u1")
+
+[node name="fence4" parent="." unique_id=1694487756 instance=ExtResource("7_f4abh")]
 transform = Transform3D(-0.90091026, 0, 0.43400502, 0, 1, 0, -0.43400502, 0, -0.90091026, -1.9741731, 4.7683716e-07, 2.6105072)
 
-[node name="fence5" parent="." instance=ExtResource("7_f4abh")]
+[node name="fence" parent="fence4" index="0" unique_id=1115451419]
+surface_material_override/0 = ExtResource("9_j28u1")
+
+[node name="fence5" parent="." unique_id=1043409594 instance=ExtResource("7_f4abh")]
 transform = Transform3D(-0.9860424, 0, 0.16649342, 0, 1, 0, -0.16649342, 0, -0.9860424, -1.3691413, 4.7683716e-07, 0.7512082)
 
-[node name="fence6" parent="." instance=ExtResource("7_f4abh")]
+[node name="fence" parent="fence5" index="0" unique_id=1115451419]
+surface_material_override/0 = ExtResource("9_j28u1")
+
+[node name="fence6" parent="." unique_id=7071391 instance=ExtResource("7_f4abh")]
 transform = Transform3D(-0.9984043, 0, -0.056466207, 0, 1, 0, 0.056466207, 0, -0.9984043, -1.2282531, 4.7683716e-07, -1.2468688)
 
-[node name="fence7" parent="." instance=ExtResource("7_f4abh")]
+[node name="fence" parent="fence6" index="0" unique_id=1115451419]
+surface_material_override/0 = ExtResource("9_j28u1")
+
+[node name="fence7" parent="." unique_id=1300472550 instance=ExtResource("7_f4abh")]
 transform = Transform3D(-0.9999878, 0, -0.004904315, 0, 1, 0, 0.004904315, 0, -0.9999878, -1.2611492, 4.7683716e-07, -3.1815088)
 
-[node name="fence8" parent="." instance=ExtResource("7_f4abh")]
+[node name="fence" parent="fence7" index="0" unique_id=1115451419]
+surface_material_override/0 = ExtResource("9_j28u1")
+
+[node name="fence8" parent="." unique_id=1704974062 instance=ExtResource("7_f4abh")]
 transform = Transform3D(-0.9860424, 0, 0.16649342, 0, 1, 0, -0.16649342, 0, -0.9860424, -1.0762775, 4.7683716e-07, -5.1134686)
 
-[node name="fence9" parent="." instance=ExtResource("7_f4abh")]
+[node name="fence" parent="fence8" index="0" unique_id=1115451419]
+surface_material_override/0 = ExtResource("9_j28u1")
+
+[node name="fence9" parent="." unique_id=1671350918 instance=ExtResource("7_f4abh")]
 transform = Transform3D(-0.97826344, 0, -0.20736524, 0, 1, 0, 0.20736524, 0, -0.97826344, -1.1212738, 4.7683716e-07, -7.0483303)
 
-[node name="fence10" parent="." instance=ExtResource("7_f4abh")]
+[node name="fence" parent="fence9" index="0" unique_id=1115451419]
+surface_material_override/0 = ExtResource("9_j28u1")
+
+[node name="fence10" parent="." unique_id=911889252 instance=ExtResource("7_f4abh")]
 transform = Transform3D(-0.86185926, 0, -0.5071472, 0, 1, 0, 0.5071472, 0, -0.86185926, -1.8322227, 4.7683716e-07, -8.8572)
 
-[node name="fence11" parent="." instance=ExtResource("7_f4abh")]
+[node name="fence" parent="fence10" index="0" unique_id=1115451419]
+surface_material_override/0 = ExtResource("9_j28u1")
+
+[node name="fence11" parent="." unique_id=1223471899 instance=ExtResource("7_f4abh")]
 transform = Transform3D(-0.86185926, 0, -0.5071472, 0, 1, 0, 0.5071472, 0, -0.86185926, -2.9586265, 4.7683716e-07, -10.620267)
 
-[node name="bush" parent="." instance=ExtResource("8_uam4l")]
+[node name="fence" parent="fence11" index="0" unique_id=1115451419]
+surface_material_override/0 = ExtResource("9_j28u1")
+
+[node name="Bush2" parent="." unique_id=2123050176 instance=ExtResource("10_ax156")]
 transform = Transform3D(-0.061693136, 0, 0.99809515, 0, 1, 0, -0.99809515, 0, -0.061693136, -3.7777689, -2.3841858e-07, 12.389563)
 
-[node name="Tree" parent="." instance=ExtResource("9_ubpmf")]
+[node name="Tree" parent="." unique_id=1797817483 instance=ExtResource("9_ubpmf")]
 transform = Transform3D(0.69900215, 0, 0.7151196, 0, 1, 0, -0.7151196, 0, 0.69900215, -3.9947495, -0.12114763, 10.444108)
 
-[node name="colodec" parent="." instance=ExtResource("10_1qrvq")]
+[node name="colodec" parent="." unique_id=1806914205 instance=ExtResource("10_1qrvq")]
 transform = Transform3D(-0.543365, 0, 0.8394966, 0, 1, 0, -0.8394966, 0, -0.543365, -8.957639, 4.7683716e-07, 5.880139)
 
-[node name="bush3" parent="." instance=ExtResource("8_uam4l")]
+[node name="Box008" parent="colodec" index="0" unique_id=1178589503]
+surface_material_override/0 = ExtResource("13_kayaq")
+
+[node name="Bush" parent="." unique_id=1476151885 instance=ExtResource("10_ax156")]
 transform = Transform3D(0.87227416, 0, 0.4890171, 0, 1, 0, -0.4890171, 0, 0.87227416, -6.577524, 2.3841858e-07, 7.006501)
 
-[node name="Tree2" parent="." instance=ExtResource("9_ubpmf")]
+[node name="Tree2" parent="." unique_id=8167869 instance=ExtResource("9_ubpmf")]
 transform = Transform3D(1.1922364, 0.14763758, 0, -0.13628085, 1.2915893, 0, 0, 0, 1.2, -3.2540236, -0.17865944, 1.3093791)
 
-[node name="woods" parent="." instance=ExtResource("11_miyuv")]
+[node name="woods" parent="." unique_id=423756087 instance=ExtResource("11_miyuv")]
 transform = Transform3D(0.1143161, 0, 0.6906025, 0, 0.7, 0, -0.6906025, 0, 0.1143161, -0.10611999, -0.02655685, 13.069727)
 
-[node name="woods2" parent="." instance=ExtResource("11_miyuv")]
+[node name="Box001" parent="woods" index="0" unique_id=1709577688]
+surface_material_override/0 = ExtResource("15_ax156")
+
+[node name="woods2" parent="." unique_id=789660540 instance=ExtResource("11_miyuv")]
 transform = Transform3D(-0.33356813, 0, 0.6493322, 0, 0.73, 0, -0.6493322, 0, -0.33356813, -0.25146532, -0.02655685, 7.123332)
 
-[node name="woods3" parent="." instance=ExtResource("11_miyuv")]
+[node name="Box001" parent="woods2" index="0" unique_id=1709577688]
+surface_material_override/0 = ExtResource("15_ax156")
+
+[node name="woods3" parent="." unique_id=1294033809 instance=ExtResource("11_miyuv")]
 transform = Transform3D(0.28487924, 0, 0.68296695, 0, 0.74, 0, -0.68296695, 0, 0.28487924, 0.9953129, -0.02655685, 2.4765701)
 
-[node name="woods4" parent="." instance=ExtResource("11_miyuv")]
+[node name="Box001" parent="woods3" index="0" unique_id=1709577688]
+surface_material_override/0 = ExtResource("15_ax156")
+
+[node name="woods4" parent="." unique_id=1425215727 instance=ExtResource("11_miyuv")]
 transform = Transform3D(-0.07792549, 0, 0.66545296, 0, 0.67, 0, -0.66545296, 0, -0.07792549, 1.6599547, -0.02655685, -3.2126698)
 
-[node name="woods5" parent="." instance=ExtResource("11_miyuv")]
+[node name="Box001" parent="woods4" index="0" unique_id=1709577688]
+surface_material_override/0 = ExtResource("15_ax156")
+
+[node name="woods5" parent="." unique_id=350087345 instance=ExtResource("11_miyuv")]
 transform = Transform3D(0.04570903, 0, 0.69850606, 0, 0.7, 0, -0.69850606, 0, 0.04570903, 0.5901033, -0.026557803, -11.353453)
 
-[node name="bush2" parent="." instance=ExtResource("12_ubpmf")]
-transform = Transform3D(0.3029968, 0, 0.51787347, 0, 0.6, 0, -0.51787347, 0, 0.3029968, -6.4876504, 0, 10.120042)
+[node name="Box001" parent="woods5" index="0" unique_id=1709577688]
+surface_material_override/0 = ExtResource("15_ax156")
+
+[editable path="house"]
+[editable path="fence"]
+[editable path="fence2"]
+[editable path="fence3"]
+[editable path="fence4"]
+[editable path="fence5"]
+[editable path="fence6"]
+[editable path="fence7"]
+[editable path="fence8"]
+[editable path="fence9"]
+[editable path="fence10"]
+[editable path="fence11"]
+[editable path="colodec"]
+[editable path="woods"]
+[editable path="woods2"]
+[editable path="woods3"]
+[editable path="woods4"]
+[editable path="woods5"]

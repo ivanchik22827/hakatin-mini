@@ -1,32 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccsqn04qsvh22"]
+[gd_scene format=3 uid="uid://ccsqn04qsvh22"]
 
 [ext_resource type="PackedScene" uid="uid://bdhrh3gi8wrcq" path="res://scenes/Objects/Tree.tscn" id="1_ve30h"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_fakcn"]
-size = Vector2(10, 10)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4jjm7"]
+albedo_color = Color(0.41960785, 0.47843137, 0.32156864, 1)
 
-[node name="PathT1" type="Node3D"]
+[node name="PathT1" type="Node3D" unique_id=589750236]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("PlaneMesh_fakcn")
-
-[node name="Tree" parent="." instance=ExtResource("1_ve30h")]
+[node name="Tree" parent="." unique_id=2132899326 instance=ExtResource("1_ve30h")]
 transform = Transform3D(0.117104106, 0, -0.99311966, 0, 1, 0, 0.99311966, 0, 0.117104106, -3.5041568, -0.15726697, -4.1708374)
 
-[node name="Tree2" parent="." instance=ExtResource("1_ve30h")]
+[node name="Tree2" parent="." unique_id=522380755 instance=ExtResource("1_ve30h")]
 transform = Transform3D(-0.9967269, 0, -0.08084254, 0, 0.9, 0, 0.08084254, 0, -0.9967269, -1.2303796, -0.013011575, -4.2348456)
 
-[node name="Tree3" parent="." instance=ExtResource("1_ve30h")]
+[node name="Tree3" parent="." unique_id=1541282038 instance=ExtResource("1_ve30h")]
 transform = Transform3D(-0.9473054, 0, 0.32033184, 0, 1.2, 0, -0.32033184, 0, -0.9473054, 1.4597552, -0.17044401, -4.349026)
 
-[node name="Tree4" parent="." instance=ExtResource("1_ve30h")]
+[node name="Tree4" parent="." unique_id=1328004296 instance=ExtResource("1_ve30h")]
 transform = Transform3D(0.09928503, 0, 0.995059, 0, 0.9, 0, -0.995059, 0, 0.09928503, 3.6886744, -0.09737015, -4.248432)
 
-[node name="Tree5" parent="." instance=ExtResource("1_ve30h")]
+[node name="Tree5" parent="." unique_id=120376400 instance=ExtResource("1_ve30h")]
 transform = Transform3D(0.13651095, 0, -0.99063855, 0, 0.9, 0, 0.99063855, 0, 0.13651095, -2.9916327, -0.12843251, 4.000652)
 
-[node name="Tree6" parent="." instance=ExtResource("1_ve30h")]
+[node name="Tree6" parent="." unique_id=1524256327 instance=ExtResource("1_ve30h")]
 transform = Transform3D(0.72911197, 0, 0.6843944, 0, 1, 0, -0.6843944, 0, 0.72911197, 3.2497563, -0.21362436, 4.3366594)
 
-[node name="Tree7" parent="." instance=ExtResource("1_ve30h")]
+[node name="Tree7" parent="." unique_id=1933671934 instance=ExtResource("1_ve30h")]
 transform = Transform3D(0.48747873, 0, 0.87313485, 0, 1.1, 0, -0.87313485, 0, 0.48747873, -0.20806599, -0.23279047, 4.1534405)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1959970052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00838121, 0)
+use_collision = true
+size = Vector3(10, 0.001, 10)
+material = SubResource("StandardMaterial3D_4jjm7")
