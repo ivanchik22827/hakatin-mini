@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bp2phb22wm7ta" path="res://sprites/Swordsman lvl3/Swordsman_lvl3_Run_Attack_with_shadow.png" id="4_qf04x"]
 [ext_resource type="Texture2D" uid="uid://coewhdkspd5qn" path="res://sprites/Swordsman lvl3/Swordsman_lvl3_Run_with_shadow.png" id="5_owbkd"]
 [ext_resource type="Texture2D" uid="uid://t46614ayh07s" path="res://sprites/Swordsman lvl3/Swordsman_lvl3_Hurt_with_shadow.png" id="6_b4tmt"]
+[ext_resource type="Script" uid="uid://bl0qilg1oyntx" path="res://scripts/MainCharacter.gd" id="7_72ptp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vg5fh"]
 atlas = ExtResource("1_tnihq")
@@ -802,7 +803,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_otf54")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_back",
 "speed": 12.0
 }, {
@@ -831,7 +832,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dekl5")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_front",
 "speed": 12.0
 }, {
@@ -860,7 +861,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uuxdo")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_left",
 "speed": 12.0
 }, {
@@ -889,7 +890,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nu7ai")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_right",
 "speed": 12.0
 }, {
@@ -915,7 +916,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ovpdi")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_back",
 "speed": 7.0
 }, {
@@ -941,7 +942,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kfb5b")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_front",
 "speed": 7.0
 }, {
@@ -967,7 +968,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t3kkw")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_left",
 "speed": 7.0
 }, {
@@ -993,7 +994,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wqasv")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_right",
 "speed": 7.0
 }, {
@@ -1409,7 +1410,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_p513h")
 }],
-"loop": true,
+"loop": false,
 "name": &"takeDamage_back",
 "speed": 10.0
 }, {
@@ -1429,7 +1430,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fkqad")
 }],
-"loop": true,
+"loop": false,
 "name": &"takeDamage_front",
 "speed": 10.0
 }, {
@@ -1449,7 +1450,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_he0sd")
 }],
-"loop": true,
+"loop": false,
 "name": &"takeDamage_left",
 "speed": 10.0
 }, {
@@ -1469,7 +1470,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_o3fam")
 }],
-"loop": true,
+"loop": false,
 "name": &"takeDamage_right",
 "speed": 10.0
 }]
@@ -1478,15 +1479,16 @@ animations = [{
 height = 0.5860596
 radius = 0.2163086
 
-[node name="MainCharacter" type="CharacterBody3D" unique_id=895241956]
+[node name="MainCharacter" type="CharacterBody3D" unique_id=895241956 groups=["Player"]]
+script = ExtResource("7_72ptp")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1465493788]
+[node name="Sprite3D" type="AnimatedSprite3D" parent="." unique_id=1465493788]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30431843, 0)
 pixel_size = 0.02
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_pnwlc")
-animation = &"run_attack_left"
+animation = &"takeDamage_right"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=724404048]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29534912, 0)

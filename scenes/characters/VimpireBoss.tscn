@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cf4tlqn1v71kg" path="res://sprites/Vampires3/Vampires3_Idle_with_shadow.png" id="3_dx7d1"]
 [ext_resource type="Texture2D" uid="uid://5hg4aamcib50" path="res://sprites/Vampires3/Vampires3_Run_with_shadow.png" id="4_rf186"]
 [ext_resource type="Texture2D" uid="uid://cs3lmkgkc7wuh" path="res://sprites/Vampires3/Vampires3_Hurt_with_shadow.png" id="5_4jv66"]
+[ext_resource type="Script" uid="uid://cqh84kdou6fb8" path="res://scripts/Enemy.gd" id="6_0a25y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6uvw"]
 atlas = ExtResource("1_oyyk3")
@@ -669,7 +670,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yjl5f")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_back",
 "speed": 12.0
 }, {
@@ -710,7 +711,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_66cqa")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_front",
 "speed": 12.0
 }, {
@@ -751,7 +752,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f2rdv")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_left",
 "speed": 12.0
 }, {
@@ -792,7 +793,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_44jpk")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_right",
 "speed": 12.0
 }, {
@@ -830,7 +831,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0ppik")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_back",
 "speed": 11.0
 }, {
@@ -868,7 +869,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qtexa")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_front",
 "speed": 11.0
 }, {
@@ -906,7 +907,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yhj3w")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_left",
 "speed": 11.0
 }, {
@@ -944,7 +945,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_do4mm")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_right",
 "speed": 11.0
 }, {
@@ -1145,7 +1146,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mcmcq")
 }],
-"loop": true,
+"loop": false,
 "name": &"takeDamage_back",
 "speed": 6.0
 }, {
@@ -1162,7 +1163,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4c87q")
 }],
-"loop": true,
+"loop": false,
 "name": &"takeDamage_front",
 "speed": 6.0
 }, {
@@ -1179,7 +1180,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gtob5")
 }],
-"loop": true,
+"loop": false,
 "name": &"takeDamage_left",
 "speed": 6.0
 }, {
@@ -1196,7 +1197,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qlsa3")
 }],
-"loop": true,
+"loop": false,
 "name": &"takeDamage_right",
 "speed": 6.0
 }]
@@ -1206,15 +1207,15 @@ height = 0.9975586
 radius = 0.53466797
 
 [node name="VimpireBoss" type="CharacterBody3D" unique_id=607240379]
+script = ExtResource("6_0a25y")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=644981319]
+[node name="Sprite3D" type="AnimatedSprite3D" parent="." unique_id=644981319]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34614068, 0)
 pixel_size = 0.03
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_7baq5")
-animation = &"run_front"
-frame_progress = 0.33698037
+animation = &"takeDamage_right"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1762173980]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5012207, 0)
