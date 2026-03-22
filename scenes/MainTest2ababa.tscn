@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cin28pnrbnpih" path="res://scenes/BigScenes/PathWay3.tscn" id="3_hkb3r"]
 [ext_resource type="PackedScene" uid="uid://cxkrd3om5yv5b" path="res://scenes/BigScenes/PathWay4.tscn" id="4_r8y3t"]
 [ext_resource type="PackedScene" uid="uid://o7o3ow6q0ly4" path="res://scenes/characters/MainCharacter.tscn" id="5_3qlnb"]
+[ext_resource type="AudioStream" uid="uid://dvbrwe8nsceai" path="res://audio/music/START MENU.mp3" id="6_fr12f"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_sm6fx"]
 rayleigh_color = Color(0.075720586, 0.0033886065, 0.1317153, 1)
@@ -56,6 +57,11 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 30, 
 
 [node name="MainCharacter" parent="." unique_id=895241956 instance=ExtResource("5_3qlnb")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.50907445, 1.1270738, 12.615574)
+
+[node name="StartMenu" type="AudioStreamPlayer" parent="MainCharacter" unique_id=259210957]
+stream = ExtResource("6_fr12f")
+volume_db = -12.093
+autoplay = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=869013369]
 environment = SubResource("Environment_hkb3r")
