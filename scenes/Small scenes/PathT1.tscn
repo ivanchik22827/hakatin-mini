@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://c17bc1qa422q1"]
+
+[ext_resource type="PackedScene" uid="uid://bdhrh3gi8wrcq" path="res://scenes/Objects/Tree.tscn" id="1_ve30h"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fakcn"]
+size = Vector2(10, 10)
+
+[node name="Path2" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_fakcn")
+
+[node name="Tree" parent="." instance=ExtResource("1_ve30h")]
+transform = Transform3D(0.8635628, 0, 0.5042412, 0, 1.1, 0, -0.5042412, 0, 0.8635628, -1.7376676, -0.21124697, -4.1620164)
+
+[node name="Tree3" parent="." instance=ExtResource("1_ve30h")]
+transform = Transform3D(-0.90065277, 0, 0.43453953, 0, 1, 0, -0.43453953, 0, -0.90065277, 0.7325797, -0.1792767, -4.3763857)
+
+[node name="Tree4" parent="." instance=ExtResource("1_ve30h")]
+transform = Transform3D(-0.6482129, 0, -0.7614591, 0, 1.1, 0, 0.7614591, 0, -0.6482129, 3.675446, -0.22282219, -4.370701)
+
+[node name="Tree5" parent="." instance=ExtResource("1_ve30h")]
+transform = Transform3D(-0.5720314, 0, 0.82023174, 0, 1, 0, -0.82023174, 0, -0.5720314, -4.048443, -0.15700555, 4.0818954)
+
+[node name="Tree6" parent="." instance=ExtResource("1_ve30h")]
+transform = Transform3D(-0.6246023, 0, -0.780943, 0, 1.1, 0, 0.780943, 0, -0.6246023, 4.141826, -0.10155094, 4.181759)
+
+[node name="Tree7" parent="." instance=ExtResource("1_ve30h")]
+transform = Transform3D(-0.06474128, 0, -0.9979021, 0, 0.9, 0, 0.9979021, 0, -0.06474128, -4.094496, -0.115115166, -4.394412)
