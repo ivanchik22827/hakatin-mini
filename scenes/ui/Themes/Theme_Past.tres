@@ -1,0 +1,34 @@
+[gd_resource type="Theme" format=3 uid="uid://dp4ebb13sldm7"]
+
+[ext_resource type="FontFile" uid="uid://dqnwu44pxp1g6" path="res://Fonts/Almendra-Regular.ttf" id="1_sne5i"]
+[ext_resource type="Texture2D" uid="uid://cqyxsjdfn18s" path="res://images/Textures/ramkiMenu.png" id="2_4a3th"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gy6ah"]
+texture = ExtResource("2_4a3th")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(0, 500, 1408, 250)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ntvy3"]
+texture = ExtResource("2_4a3th")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 32.0
+region_rect = Rect2(0, 20, 1408, 250)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sne5i"]
+texture = ExtResource("2_4a3th")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(0, 270, 1408, 250)
+
+[resource]
+Button/fonts/font = ExtResource("1_sne5i")
+Button/styles/hover = SubResource("StyleBoxTexture_gy6ah")
+Button/styles/normal = SubResource("StyleBoxTexture_ntvy3")
+Button/styles/pressed = SubResource("StyleBoxTexture_sne5i")

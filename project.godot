@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="HakatinMini"
+<<<<<<< HEAD
 run/main_scene="uid://co7qfej3l1ddf"
+=======
+run/main_scene="uid://fln4tg0fnbiy"
+>>>>>>> 1bb4267039d0f5a5c05971dbe2d87d0b79158ca9
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Settings="*uid://dahumthxxdm4s"
 
 [input]
 

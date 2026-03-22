@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://b5ibprbwym2gs"]
+
+[node name="RestartMenu" type="CanvasLayer" unique_id=1293111003]
+process_mode = 3
+
+[node name="Control" type="Control" parent="." unique_id=98350852]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=217870820]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6431373)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=210177885]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -296.5
+offset_top = -206.5
+offset_right = 296.5
+offset_bottom = 206.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer" unique_id=1336324584]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer" unique_id=1331670589]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "WASTED"
+horizontal_alignment = 1
+
+[node name="Restart" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=1269467269]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Restard"
+
+[node name="Quit" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=548927193]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Quit"
