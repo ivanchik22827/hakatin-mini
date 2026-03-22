@@ -2,8 +2,8 @@ extends CharacterBody3D
 
 class_name Enemy
 
-@export var SPEED: float = 3.0
-@export var AGGRO_RANGE: float = 10.0 # Дистанция реакции на игрока
+@export var SPEED: float = 2.0
+@export var AGGRO_RANGE: float = 5.0 # Дистанция реакции на игрока
 @export var ATTACK_RANGE: float = 1.0 # Дистанция удара
 
 @onready var sprite = $Sprite3D
@@ -16,7 +16,7 @@ var is_locked = false
 # ==========================================
 # ЗДЕСЬ МОЖНО ПОМЕНЯТЬ ВРЕМЯ ПРОИГРЫВАНИЯ АНИМАЦИЙ ВРАГА (в секундах)
 const TIME_ATTACK = 1.0       # Время атаки
-const TIME_TAKE_DAMAGE = 0.25 # Время стана от урона
+const TIME_TAKE_DAMAGE = 0.05 # Время стана от урона
 const TIME_DEATH = 1.0        # Время анимации смерти
 # ==========================================
 
